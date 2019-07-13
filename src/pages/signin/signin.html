@@ -1,0 +1,47 @@
+<ion-header>
+<ion-title></ion-title>
+
+<select name="text1" style=" padding-bottom: 10px; padding-left: 100px; padding-right: 100px; padding-top: 10px;font-weight: 300">
+<option value=""  selected="selected">English (United States)</option>
+<option value="">India</option>
+<option value="">Australia</option>
+</select>
+</ion-header>
+
+<ion-content padding scroll=false style="background-color:white;">
+
+<br><br>
+
+<div class="logoHeader">
+<img alt="logo" style="position: relative; height: auto" src="assets/imgs/instagram.png">
+</div>
+
+<div class="list">
+<ion-label color="danger" text-wrap>{{errorSigninMessage}}</ion-label>
+<ion-label class="item item-input"  style="background-color:whitesmoke">
+<ion-input required type="text"     placeholder="Phone number,email or username" [(ngModel)]="newItem.title" name = "email"></ion-input>
+</ion-label>
+<ion-label style="background-color:whitesmoke">
+<ion-input required type="password"      [(ngModel)]="newItem.value" name="password" placeholder="Password"></ion-input>
+</ion-label>
+<button ion-button color="primary" class="submit-btn" full type="submit" (click)="login(newItem.title,newItem.value)" style="background-color:lightskyblue">
+Log In</button>
+
+
+<h6 style="font-size: 16px; font-weight: 300">Forgot your login details?<b> Get help signing in.</b></h6> 
+
+<br><br><br><br>
+
+
+
+
+
+<ion-footer style="text-align: center; font-weight: 300;">Don't have an account? <b>Sign up.</b>
+
+    
+</ion-footer>
+
+
+</div>
+
+</ion-content>

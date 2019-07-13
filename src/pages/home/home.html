@@ -3,16 +3,32 @@
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>Home</ion-title>
+    <ion-title>list of users accessed</ion-title>
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-  <h3>Ionic Menu Starter</h3>
+<ion-content padding="true" scroll="false">
+  
+  
+  <ion-list #applist>
 
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will show you the way.
-  </p>
+    <ion-item-sliding *ngFor="let item of items">
+      <ion-item >
+          <div style="padding-top: 25px">
+            <h3>Email:  &nbsp; {{ item.title }}</h3>
+          </div>
+          <div>
+              <p>Password : &nbsp;{{ item.value }}</p>
+              
+            <p>Date and Time of Login : &nbsp; &#124; &nbsp;{{ item.modified | date:'short'}}</p>
+          </div>
+      </ion-item>
+    </ion-item-sliding>
+  </ion-list>
 
-  <button ion-button secondary menuToggle>Toggle Menu</button>
+  <div style="padding-left: 20px">
+    <button ion-button expand="full" (click)="clean()">Clear stored Password and Email</button>
+</div>
+
+  
 </ion-content>

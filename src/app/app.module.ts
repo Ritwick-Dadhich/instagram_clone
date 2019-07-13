@@ -8,27 +8,39 @@ import { ListPage } from '../pages/list/list';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import { SigninPage } from '../pages/signin/signin';
+import { LogoutPage } from '../pages/logout/logout';
+
+import { IonicStorageModule } from '@ionic/storage';
+import { StorageProvider } from '../providers/storage/storage';
 
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
-    ListPage
+    ListPage,
+    LogoutPage,
+    SigninPage
   ],
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
+    IonicStorageModule.forRoot()
   ],
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
     HomePage,
-    ListPage
+    ListPage,
+    LogoutPage,
+    SigninPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    StorageProvider,
+    Storage
   ]
 })
 export class AppModule {}
