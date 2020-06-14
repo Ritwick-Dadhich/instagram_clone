@@ -15,6 +15,7 @@ The data can be cleared by the hacker to remove  tracks and recommending patches
 DEPENDENCIES/TECH STACK-
 
 Ionic 3
+
 Node 5.5.0
 
 
