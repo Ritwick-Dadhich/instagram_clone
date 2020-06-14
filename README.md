@@ -12,6 +12,12 @@ Now, after successfully fetching user id and password, hacker can steal the cred
 
 The data can be cleared by the hacker to remove  tracks and recommending patches.
 
+DEPENDENCIES/TECH STACK-
+
+Ionic 3
+Node 5.5.0
+
+
 
 
 <img width="249" alt="insta1" src="https://user-images.githubusercontent.com/62379659/84587741-8a9dee00-ae3f-11ea-9c7d-77437449de61.PNG">
